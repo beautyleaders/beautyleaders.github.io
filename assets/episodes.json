@@ -1,0 +1,66 @@
+[
+  {
+    "id": "8kPGAjwnibs",
+    "slug": "zahra-estilaf",
+    "date": "2025-12-01",
+    "fa_date": "۱ دسامبر ۲۰۲۵",
+    "en": "Dr. Zahra Estilaf",
+    "fa": "دکتر زهرا استیلاف",
+    "role_en": "Aesthetic physician and medical technology instructor",
+    "role_fa": "پزشک زیبایی و مدرس فناوری‌های پزشکی",
+    "title_en": "Where aesthetic practice meets science and poetry",
+    "title_fa": "پیوند پزشکی زیبایی، علم و شعر",
+    "desc_en": "The published episode description introduces a physician whose professional journey connects clinical experience, teaching, invention and an interest in literature and poetry.",
+    "desc_fa": "در توضیحات منتشرشده این گفتگو، مسیر حرفه‌ای پزشکی معرفی شده که تجربه بالینی، تدریس، نوآوری و علاقه به شعر و ادبیات را در کنار هم قرار می‌دهد.",
+    "topics_en": [
+      "Professional experience in aesthetics",
+      "Medical technology and innovation",
+      "Beauty, literature and poetry"
+    ],
+    "topics_fa": [
+      "تجربه حرفه‌ای در پزشکی زیبایی",
+      "فناوری پزشکی و نوآوری",
+      "زیبایی، ادبیات و شعر"
+    ],
+    "series": "Beauty Leaders",
+    "language": "fa",
+    "video_url": "https://www.youtube.com/watch?v=8kPGAjwnibs",
+    "source": "Publisher video description",
+    "metadata_checked": "2026-11-20",
+    "status": "indexed public video; playback not retested",
+    "thumbnail": null,
+    "subtitle_en": null
+  },
+  {
+    "id": "1VzRXwutS1c",
+    "slug": "iman-abbasi",
+    "date": "2025-11-12",
+    "fa_date": "۱۲ نوامبر ۲۰۲۵",
+    "en": "Dr. Iman Abbasi",
+    "fa": "دکتر ایمان عباسی",
+    "role_en": "MD and aesthetic specialist (as introduced by the programme)",
+    "role_fa": "پزشک فعال در حوزه زیبایی (طبق معرفی برنامه)",
+    "title_en": "The professional journey behind aesthetic medicine",
+    "title_fa": "مسیر حرفه‌ای و تجربه‌های انسانی در پزشکی زیبایی",
+    "desc_en": "The programme introduces this conversation as a look at professional journeys, challenges and personal experiences in aesthetic medicine.",
+    "desc_fa": "این گفتگو در معرفی رسمی برنامه به مسیر حرفه‌ای، چالش‌ها و تجربه‌های شخصی در پزشکی زیبایی می‌پردازد.",
+    "topics_en": [
+      "Professional journeys",
+      "Challenges in aesthetic practice",
+      "Personal experience"
+    ],
+    "topics_fa": [
+      "مسیر حرفه‌ای",
+      "چالش‌های فعالیت در پزشکی زیبایی",
+      "تجربه‌های شخصی"
+    ],
+    "series": "Beauty Leaders",
+    "language": "fa",
+    "video_url": "https://www.youtube.com/watch?v=1VzRXwutS1c",
+    "source": "Publisher video description",
+    "metadata_checked": "2026-11-20",
+    "status": "indexed public video; playback not retested",
+    "thumbnail": null,
+    "subtitle_en": null
+  }
+]
