@@ -488,3 +488,41 @@ body.page-editorial .policy-list li:before{color:#c9b78f!important;top:6px!impor
  }
 }
 body.page-editorial .page-head > .wrap{background:transparent!important}
+
+
+/* Beauty Leaders v0.7.2 · visual adjustments (test phase, not design lock).
+   Correct legacy light callout on collaboration; red is used as a sparse
+   editorial typographic accent only. Keep legacy print rendering unchanged. */
+@media screen {
+  body.page-collaborate .media-band .callout {
+    background:#171717!important;
+    color:#f1ede6!important;
+    border:1px solid rgba(241,237,230,.18)!important;
+    box-shadow:none!important;
+  }
+  body.page-collaborate .media-band .callout h3 {
+    color:#f1ede6!important;
+    opacity:1!important;
+  }
+  body.page-collaborate .media-band .callout p {
+    color:#c9c6c0!important;
+    opacity:1!important;
+  }
+  body.page-collaborate .media-band .callout .text-link,
+  body.page-collaborate .media-band .callout a {
+    color:#c9b78f!important;
+    opacity:1!important;
+  }
+  body.page-collaborate .media-band .callout a:hover,
+  body.page-collaborate .media-band .callout a:focus-visible {
+    color:#f1ede6!important;
+  }
+  /* A controlled matte red, limited to individual words rather than whole blocks. */
+  .bl-red-ink{color:#d94a47!important;font-style:normal!important;}
+  body.page-index .mission-band .bl-red-ink,
+  body.page-about .bl-red-ink,
+  body.page-conversations .bl-red-ink,
+  body.page-collaborate .bl-red-ink {color:#d94a47!important;}
+  /* Keep small overlines quiet where the following headline is red. */
+  body.page-collaborate .media-band .kicker {color:#b7b4af!important;}
+}
