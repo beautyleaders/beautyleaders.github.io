@@ -1,5 +1,40 @@
 [
   {
+    "id": "eIWm7AStriI",
+    "slug": "farzin-sarkarat",
+    "date": null,
+    "en": "Professor Farzin Sarkarat",
+    "fa": "پروفسور فرزین سرکارات",
+    "role_en": "Full Professor of Oral and Maxillofacial Surgery; Adjunct Professor, Gulf Medical University, UAE",
+    "role_fa": "استادتمام جراحی دهان، فک و صورت؛ استاد مدعو دانشگاه Gulf Medical University امارات",
+    "title_en": "What Should Have the Final Say in Aesthetic Medicine?",
+    "title_fa": "در پزشکی زیبایی چه چیزی باید حرف آخر را بزند؟",
+    "desc_en": "A candid conversation on medical ethics, anatomy and function, scientific independence, commercial pressures and patient safety.",
+    "desc_fa": "گفتگویی صریح درباره اخلاق پزشکی، دانش آناتومی، استقلال علمی، منافع تجاری و ایمنی بیمار.",
+    "topics_en": [
+      "Medical ethics",
+      "Scientific independence",
+      "Patient safety",
+      "Aesthetic surgery"
+    ],
+    "topics_fa": [
+      "اخلاق پزشکی",
+      "استقلال علمی",
+      "ایمنی بیمار",
+      "جراحی زیبایی"
+    ],
+    "series": "Beauty Leaders",
+    "language": "fa",
+    "video_url": "https://www.youtube.com/watch?v=eIWm7AStriI",
+    "source": "Description provided by publisher in conversation; guest credentials as stated in official description",
+    "metadata_checked": "2026-11-21",
+    "status": "User-provided published video; site copy provisional and user-reviewed",
+    "thumbnail": "assets/img/episodes/eIWm7AStriI-fa.webp",
+    "thumbnail_fa": "assets/img/episodes/eIWm7AStriI-fa.webp",
+    "thumbnail_en": "assets/img/episodes/eIWm7AStriI-en.webp",
+    "subtitle_en": null
+  },
+  {
     "id": "8kPGAjwnibs",
     "slug": "zahra-estilaf",
     "date": "2025-12-01",
