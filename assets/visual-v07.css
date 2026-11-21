@@ -526,3 +526,90 @@ body.page-editorial .page-head > .wrap{background:transparent!important}
   /* Keep small overlines quiet where the following headline is red. */
   body.page-collaborate .media-band .kicker {color:#b7b4af!important;}
 }
+
+
+/* Beauty Leaders v0.7.3 — GLOBAL DARK SURFACE GUARANTEE
+   Site-wide visual audit identified legacy light-background specificity in
+   founder research cards and episode-detail callouts. This final on-screen
+   surface layer prevents legacy component styles from bringing back white
+   / beige cards, while deliberately preserving the A4 print stylesheet.
+   Editorial decisions/typographic accents are unchanged.
+*/
+@media screen {
+  :root {
+    --bl-panel-bg: #191919;
+    --bl-panel-raised: #20201f;
+    --bl-panel-border: rgba(241,237,230,.16);
+    --bl-panel-text: #f1ede6;
+    --bl-panel-secondary: #cac6bf;
+    --bl-panel-gold: #c9b78f;
+  }
+  /* One coherent surface system, including all legacy high-specificity
+     selectors. The !important values are intentional: they defeat the
+     historical white/beige cards without touching page content. */
+  body :is(.works-band .card,.brief-works .card,.card,.collab-grid article,
+           .episode-detail .callout,.media-band .callout,.callout) {
+    background: var(--bl-panel-bg) !important;
+    color: var(--bl-panel-text) !important;
+    border-color: var(--bl-panel-border) !important;
+    box-shadow: none !important;
+  }
+  /* Rich media cards keep their separate video art. */
+  body .episode-card { background: #191919 !important; color:var(--bl-panel-text)!important; }
+  /* The navigation panel and any future callout in long-form pages
+     inherit the same accessible dark language. */
+  body .policy-aside {
+    background: #171717 !important;
+    color: var(--bl-panel-text) !important;
+    border: 1px solid var(--bl-panel-border) !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) :is(h2,h3,h4,h5,strong) {
+    color: var(--bl-panel-text) !important;
+    opacity: 1 !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) :is(p,li,small) {
+    color: var(--bl-panel-secondary) !important;
+    opacity: 1 !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .kicker,
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .num {
+    color: var(--bl-panel-gold) !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) a:not(.btn) {
+    color: var(--bl-panel-gold) !important;
+    opacity: 1 !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) h3 a,
+  body :is(.card,.callout,.policy-aside,.collab-grid article) h2 a {
+    color: var(--bl-panel-text) !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .btn.fill,
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .btn.dark {
+    background:var(--bl-panel-gold) !important;
+    border-color:var(--bl-panel-gold) !important;
+    color:#111 !important;
+  }
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .btn.fill *,
+  body :is(.card,.callout,.policy-aside,.collab-grid article) .btn.dark * {color:#111 !important;}
+  /* Media Kit and form inputs must not silently inherit bright white skins. */
+  body :is(.search,input[type="search"],input[type="text"],textarea,select) {
+    background-color:#1a1a1a !important;
+    color:#f1ede6 !important;
+    border-color:var(--bl-panel-border) !important;
+  }
+  body :is(.search,input[type="search"],input[type="text"],textarea)::placeholder {
+    color:#aaa69f !important;opacity:1 !important;
+  }
+  /* Red remains a limited editorial accent and is not painted onto cards. */
+}
+/* Contrast correction discovered by the full-archive automated audit. */
+@media screen {
+  body .episode-card .episode-info a.text-link,
+  body .episode-info a.text-link,
+  body .archive-band a.text-link {
+    color: #d3c092 !important;
+    opacity: 1 !important;
+  }
+  body .episode-card .episode-info h3 a,
+  body .episode-info h3 a { color: #f1ede6 !important; }
+}
