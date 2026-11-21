@@ -1,2 +1,16 @@
-Deploy extracted contents to https://github.com/beautyleaders/beautyleaders.github.io/upload/main
-Keep folders at repository root. Commit to main. Verify Actions and https://beautyleaders.github.io/. Noindex remains enabled. Rollback: revert the deployment commit.
+Beauty Leaders | visual exploration v0.7 (not final design approval)
+Official website: https://beautyleaders.github.io/
+GitHub repository: https://github.com/beautyleaders/beautyleaders.github.io
+
+Deploy the design test:
+1. Keep your existing GitHub commit as a rollback point.
+2. Extract the ZIP and open its contents, not the parent folder.
+3. Go to https://github.com/beautyleaders/beautyleaders.github.io/upload/main
+4. Drag ALL extracted files/folders (assets/, conversations/, fa/, index.html, etc.) to upload.
+5. Commit to main. Wait for a successful GitHub Pages Action.
+6. Check the live URL, use Ctrl+F5 if a cached older page appears.
+
+Use the original repository structure; do not create another nested site folder.
+The website is still an experimental visual direction, not VISUAL DESIGN LOCK.
+Original URL, genuine media links, and robots noindex settings are unchanged.
+No manufactured guest portraits or invented partnerships have been added.

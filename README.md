@@ -1,14 +1,19 @@
-# Beauty Leaders website
+# Beauty Leaders | Visual exploration v0.7
 
-Static bilingual website. Current preview build v0.5.
+This is the real static bilingual Beauty Leaders website, based on the existing published site and its verified content. This change implements a **visual exploration**, not a design approval or a final brand lock.
 
-Public URL: https://beautyleaders.github.io/
-Repository: https://github.com/beautyleaders/beautyleaders.github.io
+- Official domain: https://beautyleaders.github.io/
+- Hosting: GitHub Pages (free)
+- English and Persian / RTL
+- Real user-provided photographs: founder portrait and actual studio. No synthetic guest photos are included.
+- Colors and typefaces remain experimental pending owner review.
+- Original articles, evidence, episode links and media information remain in place.
+- Video thumbnails load from the publisher only where accessible, without autoplay.
+- Navigation remains available during scroll and supports Escape on mobile.
+- `noindex,nofollow` is deliberately retained until a later publishing decision.
 
-Deploy the contents of this folder to the root of main, preserving assets and fa folders. GitHub Pages uses main / (root). Keep the prior commit for rollback; audited baseline: fea23681bc136104e7bc919ec13942564e3c3692. Revert the deployment commit to restore it.
+## Rollback
+Keep the pre-redesign ZIP and GitHub commit SHA. Do not delete old versions until the owner approves the new architecture.
 
-Each English page has a matching Persian page. Episode metadata: assets/episodes.json. Update both static output pages and cards together when metadata changes. Use only public approved data.
-
-Preview is public but noindex/nofollow and robots disallow crawling. After owner approval, remove noindex/nofollow, allow crawling, create sitemap.xml with canonical public URLs, and submit to Search Console. Do not index the preview.
-
-Episode covers use public YouTube image URLs associated with existing video IDs, with a local typographic fallback. Replace remote URLs with verified local WebP covers when available. No automatic video embeds.
+## Deployment
+Upload every file and folder at the root of `beautyleaders/beautyleaders.github.io`. Keep paths unchanged. GitHub Pages serves `main` at `/`.
