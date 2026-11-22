@@ -67,3 +67,12 @@ html[lang=fa] body.bl-bulk .bl-archive-head p.bl-archive-sub{font-size:.97rem;li
 @media(max-width:760px){.bl-bulk .bl-ep-grid{display:flex;flex-direction:column-reverse;align-items:stretch;padding-block:0 44px;gap:0}.bl-bulk .bl-ep-cover{border:0;border-bottom:1px solid #403227;margin-inline:-20px;width:calc(100% + 40px);max-width:none;box-shadow:none}.bl-bulk .bl-ep-heading{padding-top:28px}.bl-bulk .bl-ep-heading h1{font-size:clamp(2.05rem,8vw,3.25rem);line-height:1.2}.bl-bulk .bl-ep-editorial-grid{grid-template-columns:1fr;gap:12px}.bl-bulk .bl-archive-grid{grid-template-columns:1fr;gap:20px}.bl-bulk .bl-archive-card-copy{padding:22px}.bl-bulk .bl-archive-toolbar input{width:100%;min-width:0}.bl-bulk .bl-archive-toolbar{gap:12px}.bl-bulk .bl-ep-meta{gap:8px 16px}.bl-bulk .bl-ep-meta span+span{padding-inline-start:10px}}
 @media(max-width:420px){.bl-bulk .bl-ep-actions a{width:100%}.bl-bulk .bl-archive-head{padding-top:45px}.bl-bulk .bl-archive-card h2{font-size:1.5rem}html[lang=fa] body.bl-bulk .bl-ep-heading h1{font-size:clamp(1.85rem,7.2vw,2.3rem)}.bl-bulk .bl-ep-cover{margin-inline:-16px;width:calc(100% + 32px)}}
 @media(prefers-reduced-motion:reduce){.bl-bulk .bl-archive-cover img{transition:none}}
+
+/* Guest profile cross-links and actual 10-item episode pagination */
+.bl-bulk .bl-ep-actions a.bl-guest-profile-link{border:1px solid #b99c68;color:#e1c997;padding:11px 15px}
+.bl-bulk .bl-archive-card-cta a.bl-guest-profile-link{color:#e8c889}
+.bl-bulk .bl-episode-pages{margin:38px auto 0;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px}
+.bl-bulk .bl-episode-pages a,.bl-bulk .bl-episode-pages button{min-width:44px;height:44px;display:inline-grid;place-items:center;border:1px solid #554632;background:#15130f;color:#e8dbc1;text-decoration:none;font:600 .9rem Arial,sans-serif;cursor:pointer}
+.bl-bulk .bl-episode-pages .current{background:#c9b78f;color:#16120e;border-color:#c9b78f}
+.bl-bulk .bl-archive-guest a{color:inherit;text-decoration:underline;text-decoration-color:#786b57}
+.bl-bulk .bl-ep-guest a{color:inherit;text-decoration:underline;text-decoration-color:#786b57}
