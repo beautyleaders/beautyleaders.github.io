@@ -18,7 +18,7 @@
   }
   async function search(){
     const val=normalize(input.value);
-    if(!val){grid.innerHTML=original;pages.innerHTML=originalPages;count.textContent='29'+(fa?' گفتگو':' conversations');return}
+    if(!val){grid.innerHTML=original;pages.innerHTML=originalPages;count.textContent=(window.__blPublishedCount||document.querySelectorAll('.bl-archive-card').length)+(fa?' گفتگو':' conversations');return}
     if(!all){try{const res=await fetch(indexURL);if(!res.ok)throw new Error('index');all=await res.json()}catch(e){count.textContent=fa?'جستجو موقتاً در دسترس نیست':'Search temporarily unavailable';return}}
     const current=normalize(input.value);filtered=all.filter(x=>normalize(x.search).includes(current));page=0;render();
   }

@@ -1,0 +1,59 @@
+
+/* Beauty Leaders — approved editorial/UX release 2026-11-22 */
+.bl-red-ink{color:#d94a47!important}
+.bl-disclaimer-label{color:#d94a47;font-weight:750}
+body.page-guests[lang="en"] .bl-guest-list-hero h1,html[lang="en"] body.page-guests .bl-guest-list-hero h1{color:#d94a47!important}
+.bl-photo-hero{position:relative;isolation:isolate;min-height:570px;background:#080808!important;padding:0!important;display:flex;align-items:center;border-bottom:1px solid rgba(241,237,230,.16);overflow:hidden}
+.bl-photo-hero-bg{position:absolute;z-index:-2;inset:0;background-size:cover;background-position:center center;background-repeat:no-repeat}
+.bl-about-hero .bl-photo-hero-bg{background-image:url('img/about-hero-approved.webp')}
+.bl-media-hero .bl-photo-hero-bg{background-image:url('img/media-hero-approved.webp')}
+.bl-photo-hero:before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.88) 17%,rgba(8,8,8,.35) 47%,rgba(8,8,8,.02) 75%)}
+.bl-photo-hero>.wrap{width:min(1330px,calc(100% - 96px));padding:105px 0 110px;position:relative;z-index:1}
+.bl-photo-hero h1{max-width:690px;margin:0 0 22px;font-size:clamp(3.2rem,5.4vw,6rem);line-height:1.12}
+.bl-photo-hero .lead{max-width:49ch;color:#eee8e1;line-height:1.85}
+.bl-photo-hero .kicker{max-width:50ch}
+[dir=rtl] .bl-photo-hero .bl-photo-hero-bg{transform:scaleX(-1)}
+[dir=rtl] .bl-photo-hero:before{background:linear-gradient(270deg,#080808 0%,rgba(8,8,8,.90) 20%,rgba(8,8,8,.3) 55%,rgba(8,8,8,.03) 78%)}
+[dir=rtl] .bl-photo-hero .wrap{text-align:right}
+[dir=rtl] .bl-photo-hero h1{font-size:clamp(2.3rem,4.6vw,4.5rem);max-width:700px}
+.bl-about-prose .prose{max-width:1050px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 38px}
+.bl-about-prose .prose>a{grid-column:1/-1;justify-self:start}
+.bl-about-prose .narrative{margin:0}
+.bl-media-overview .bl-media-prose-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
+.bl-media-overview .bl-media-prose h2{font-size:clamp(2rem,2.55vw,3rem)}
+.bl-media-overview p,.bl-media-narrow p{font-size:1rem;line-height:1.98}
+.bl-media-audience,.bl-media-trust{background:#111!important}
+.bl-media-narrow{max-width:950px}
+.bl-media-featured{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.bl-media-featured .episode-card .video-thumb{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:2}
+.bl-media-featured .episode-info{flex:1;display:flex;flex-direction:column;gap:10px}
+.bl-media-featured .episode-info h3{font-size:1.5rem;line-height:1.35;margin:0}
+.bl-media-card-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:auto;padding-top:20px}
+.bl-media-archive-link{text-align:center;margin:32px 0 0}
+.bl-media-collab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.bl-media-collab-grid article{padding:28px 24px;background:#171717;border:1px solid rgba(241,237,230,.16)}
+.bl-media-index{display:block;color:#d94a47;font-size:1.25rem;font-weight:700;margin-bottom:22px}
+.bl-media-collab-grid h3{font-size:1.25rem;line-height:1.5}
+.bl-media-conditions{margin-top:26px;max-width:1000px}
+.bl-media-enquiry-actions{display:flex;gap:15px;flex-wrap:wrap;margin:26px 0}
+.bl-media-enquiry-actions .bl-icon{width:18px;height:18px;margin-inline-end:9px}
+.bl-media-enquiries .muted{max-width:900px;font-size:.84rem}
+.bl-media-enquiries .print-button{margin-top:15px}
+.bl-contact-intro{max-width:940px}
+.bl-contact-intro h3{margin-top:38px}
+.bl-contact-routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;padding:0;list-style:none;margin:24px 0}
+.bl-contact-row{display:flex;align-items:center;gap:15px;min-width:0;background:#171717;border:1px solid rgba(241,237,230,.16);padding:22px}
+.bl-contact-row>div{display:flex;flex-direction:column;min-width:0;gap:4px}
+.bl-contact-label{font-weight:750;font-size:.85rem;color:#f1ede6}
+.bl-contact-row a,.bl-contact-row .bl-email-placeholder{overflow-wrap:anywhere;font-size:.95rem;color:#d5c091;text-decoration:none}
+.bl-contact-row a:hover{text-decoration:underline}
+.bl-demo-label{font-size:.72rem;color:#aaa29b}
+.bl-contact-footnote{font-size:.87rem;margin-top:20px}
+.bl-icon{display:inline-block;vertical-align:middle;flex:0 0 auto;width:23px;height:23px;color:#c9b78f}
+.bl-footer-social{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px 24px 19px;border-top:1px solid rgba(241,237,230,.10);margin-top:22px}
+.bl-footer-social a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(241,237,230,.24);border-radius:5px;color:#c9b78f;transition:color .2s,border-color .2s}
+.bl-footer-social a:hover{border-color:#d94a47;color:#f1ede6}
+.bl-footer-social .bl-icon{width:21px;height:21px;color:inherit}
+@media(max-width:800px){.bl-photo-hero{min-height:480px}.bl-photo-hero>.wrap{width:min(100% - 44px,1330px);padding:85px 0}.bl-about-prose .prose,.bl-media-overview .bl-media-prose-grid{grid-template-columns:1fr}.bl-media-collab-grid{grid-template-columns:1fr}.bl-media-featured{grid-template-columns:1fr}.bl-contact-routes{grid-template-columns:1fr}}
+@media(max-width:520px){.bl-photo-hero{min-height:490px;align-items:end}.bl-photo-hero-bg{background-position:60% top;opacity:.80}.bl-photo-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.94) 38%,rgba(8,8,8,.33) 80%,rgba(8,8,8,.1) 100%)}[dir=rtl] .bl-photo-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.94) 38%,rgba(8,8,8,.33) 80%,rgba(8,8,8,.1) 100%)}.bl-photo-hero>.wrap{padding:145px 0 40px}.bl-photo-hero h1{font-size:clamp(2.6rem,9vw,3.75rem)}[dir=rtl] .bl-photo-hero h1{font-size:clamp(2.1rem,7.3vw,3.1rem)}.bl-media-collab-grid article{padding:22px}.bl-media-featured .episode-info{padding:19px}}
+@media print{.bl-footer-social,.bl-photo-hero-bg,.bl-photo-hero:before{display:none!important}.bl-photo-hero{min-height:auto!important;background:#fff!important;color:#111!important}.bl-photo-hero h1,.bl-photo-hero .lead,.bl-photo-hero .kicker{color:#111!important}.bl-photo-hero>.wrap{padding:25px 0!important}.bl-media-featured{grid-template-columns:repeat(2,1fr)!important}.bl-media-featured .episode-card{break-inside:avoid}.bl-media-overview,.bl-media-audience,.bl-media-collabs,.bl-media-trust,.bl-media-enquiries{padding:20px 0!important}.bl-media-collab-grid{grid-template-columns:repeat(3,1fr)!important}.bl-media-enquiry-actions,.print-button{display:none!important}}
