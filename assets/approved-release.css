@@ -368,3 +368,24 @@ body.page-index .hero.visual-studio-hero .hero-copy{z-index:3!important}
    position:relative!important;z-index:1!important;
  }
 }
+
+
+/* Collaboration release: plain vector WHITE external-link arrows ONLY on mobile/tablet.
+   Desktop footer, page geometry and approved styles remain unchanged. */
+@media(max-width:1200px){
+ .bl-contact-a .bl-contact-row::after,
+ html[lang="fa"] .bl-contact-a .bl-contact-row::after{
+   content:""!important;display:block!important;width:17px!important;height:17px!important;
+   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 19 19 5 M8 5h11v11'/%3E%3C/svg%3E")!important;
+   background-size:contain!important;background-repeat:no-repeat!important;background-position:center!important;
+   box-shadow:none!important;filter:none!important;font-size:0!important;
+ }
+ .bl-contact-a .bl-contact-route-0::after,
+ html[lang="fa"] .bl-contact-a .bl-contact-route-0::after{background-image:none!important}
+ a .bl-mobile-external-arrow{
+   display:inline-block!important;width:.89em!important;height:.89em!important;margin-inline-start:.3em!important;
+   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 19 19 5 M8 5h11v11'/%3E%3C/svg%3E")!important;
+   background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;
+   vertical-align:-.08em!important;box-shadow:none!important;filter:none!important;
+ }
+}

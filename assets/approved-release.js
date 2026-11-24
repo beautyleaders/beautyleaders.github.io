@@ -38,3 +38,39 @@
  if(desktop.addEventListener)desktop.addEventListener('change',sync);
  else if(desktop.addListener)desktop.addListener(sync);
 })();
+
+
+/* Mobile/tablet: eliminate iOS blue-emoji arrow rendering site-wide without changing links or desktop. */
+(()=>{
+ 'use strict';
+ const mobile=window.matchMedia('(max-width: 1200px)');
+ let queued=false;
+ function fixAnchor(a){
+   if(!a || !a.querySelectorAll || a.dataset.blArrowFixed==='1')return;
+   // Only replace the outward-diagonal glyphs, keeping all labels and destinations intact.
+   const walker=document.createTreeWalker(a,NodeFilter.SHOW_TEXT);
+   const nodes=[];
+   let n;
+   while((n=walker.nextNode()))if(/[↗↖]/.test(n.nodeValue||''))nodes.push(n);
+   for(const node of nodes){
+     const bits=(node.nodeValue||'').split(/([↗↖])/g);
+     const frag=document.createDocumentFragment();
+     for(const bit of bits){
+       if(bit==='↗'||bit==='↖'){
+         const svg=document.createElement('span');svg.className='bl-mobile-external-arrow';
+         svg.setAttribute('aria-hidden','true');frag.appendChild(svg);
+       }else if(bit)frag.appendChild(document.createTextNode(bit));
+     }
+     node.parentNode?.replaceChild(frag,node);
+   }
+   if(nodes.length)a.dataset.blArrowFixed='1';
+ }
+ function refresh(){
+   if(!mobile.matches)return;
+   document.querySelectorAll('a').forEach(fixAnchor);
+ }
+ function schedule(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;refresh()})}
+ // No desktop DOM changes; only run on narrow screens.
+ if(mobile.matches){refresh();const observer=new MutationObserver(schedule);observer.observe(document.body,{childList:true,subtree:true});}
+ mobile.addEventListener?.('change',()=>{if(mobile.matches)refresh()});
+})();

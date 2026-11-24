@@ -1,0 +1,33 @@
+/* Beauty Leaders Collaboration: owner-selected image, independent desktop EN/FA and mobile/tablet assets. */
+body.page-collaborate .page-head.bl-collab-hero{position:relative!important;isolation:isolate;display:flex!important;align-items:center!important;justify-content:center!important;height:clamp(540px,37vw,760px)!important;min-height:0!important;padding:0!important;margin:0!important;overflow:hidden!important;background:#080808!important;border-bottom:1px solid #282525}
+body.page-collaborate .bl-collab-hero .bl-collab-visual{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:block!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important}
+body.page-collaborate .bl-collab-hero .bl-collab-visual img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;max-width:none!important;transform:none!important;filter:none!important}
+body.page-collaborate .page-head.bl-collab-hero>.wrap.bl-collab-copy{position:relative!important;z-index:1!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;grid-template-columns:none!important;grid-template-rows:none!important;gap:0!important;width:min(1330px,calc(100% - 88px))!important;margin:0 auto!important;padding:48px 0!important;min-height:0!important;max-width:1330px!important;background:transparent!important}
+body.page-collaborate .bl-collab-copy h1{max-width:13ch!important;font-size:clamp(3.2rem,5.2vw,5.8rem)!important;line-height:1.07!important;color:#f2efea!important;letter-spacing:-.035em!important;position:relative!important;margin:8px 0 22px!important}
+body.page-collaborate .bl-collab-copy .kicker{max-width:34%!important;position:relative!important;color:#cbb58a!important;align-self:flex-start!important;margin:0 0 22px!important}
+body.page-collaborate .bl-collab-copy .lead{max-width:30ch!important;color:#e1dcd4!important;font-size:clamp(.96rem,1.2vw,1.19rem)!important;line-height:1.8!important}
+html[lang="fa"] body.page-collaborate .page-head.bl-collab-hero>.wrap.bl-collab-copy{direction:rtl!important;text-align:right!important;align-items:flex-start!important}
+html[lang="fa"] body.page-collaborate .bl-collab-copy h1{letter-spacing:0!important;line-height:1.45!important;font-size:clamp(2.6rem,4.2vw,4.4rem)!important;max-width:10ch!important}
+html[lang="fa"] body.page-collaborate .bl-collab-copy .lead{max-width:28ch!important}
+@media(max-width:1200px){
+ body.page-collaborate .page-head.bl-collab-hero{display:block!important;height:auto!important;min-height:0!important}
+ body.page-collaborate .bl-collab-hero .bl-collab-visual{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;display:block!important;overflow:hidden!important;z-index:0!important}
+ body.page-collaborate .bl-collab-hero .bl-collab-visual img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;max-width:100%!important}
+ body.page-collaborate .page-head.bl-collab-hero>.wrap.bl-collab-copy{width:min(100% - 56px,880px)!important;max-width:880px!important;display:block!important;padding:38px 0 58px!important}
+ body.page-collaborate .bl-collab-copy .kicker{max-width:none!important}
+ body.page-collaborate .bl-collab-copy h1{font-size:clamp(2.8rem,6vw,4.7rem)!important;max-width:19ch!important;margin:12px 0 20px!important}
+ body.page-collaborate .bl-collab-copy .lead{max-width:58ch!important;font-size:1.04rem!important}
+ html[lang="fa"] body.page-collaborate .bl-collab-copy h1{font-size:clamp(2.1rem,5vw,3.8rem)!important;max-width:none!important}
+ html[lang="fa"] body.page-collaborate .bl-collab-copy .lead{max-width:58ch!important}
+}
+@media(max-width:600px){
+ body.page-collaborate .page-head.bl-collab-hero>.wrap.bl-collab-copy{width:calc(100% - 42px)!important;padding:32px 0 50px!important}
+ body.page-collaborate .bl-collab-copy h1{font-size:clamp(2.35rem,10vw,3.5rem)!important;max-width:16ch!important}
+ html[lang="fa"] body.page-collaborate .bl-collab-copy h1{font-size:clamp(2.1rem,8.2vw,3rem)!important;line-height:1.52!important}
+ body.page-collaborate .bl-collab-copy .lead{font-size:.98rem!important}
+}
+@media print{
+ body.page-collaborate .page-head.bl-collab-hero{height:auto!important;min-height:0!important;padding:0!important}
+ body.page-collaborate .bl-collab-hero .bl-collab-visual{display:none!important}
+ body.page-collaborate .page-head.bl-collab-hero>.wrap.bl-collab-copy{padding:12pt!important}
+}
