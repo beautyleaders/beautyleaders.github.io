@@ -268,3 +268,15 @@ body.page-index .hero.visual-studio-hero .hero-copy{z-index:3!important}
  }
 }
 
+
+
+/* ROUND 4: mobile-only hero fixes. Desktop must remain untouched. */
+@media(max-width:800px){
+ .bl-about-hero .bl-photo-hero-bg{background-image:url('img/about-hero-mobile.webp')!important;background-position:center center!important}
+ .bl-media-hero .bl-photo-hero-bg{background-image:url('img/media-hero-mobile.webp')!important;background-position:center center!important}
+}
+@media(max-width:768px){
+ body.page-index .hero.visual-studio-hero .hero-studio-photo picture{display:block;width:100%;height:100%}
+ body.page-index .hero.visual-studio-hero .hero-studio-photo img{object-position:center center!important}
+ [dir="rtl"] body.page-index .hero.visual-studio-hero .hero-studio-photo img{object-position:center center!important}
+}
