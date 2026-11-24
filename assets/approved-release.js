@@ -19,3 +19,22 @@
    }).catch(()=>{});
  }
 })();
+/* ROUND 2: move existing social links to the approved desktop footer slot;
+   return the SAME elements to the original bottom row on small screens. */
+(()=>{
+ 'use strict';
+ const footer=document.querySelector('footer');
+ if(!footer)return;
+ const wrap=footer.querySelector(':scope > .wrap');
+ const nav=wrap?.querySelector('nav');
+ const socials=footer.querySelector('.bl-footer-social');
+ if(!wrap||!nav||!socials)return;
+ const desktop=window.matchMedia('(min-width: 901px)');
+ const sync=()=>{
+   if(desktop.matches){if(socials.parentElement!==wrap)wrap.insertBefore(socials,nav);}
+   else if(socials.parentElement!==footer)footer.appendChild(socials);
+ };
+ sync();
+ if(desktop.addEventListener)desktop.addEventListener('change',sync);
+ else if(desktop.addListener)desktop.addListener(sync);
+})();

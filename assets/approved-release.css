@@ -57,3 +57,109 @@ body.page-guests[lang="en"] .bl-guest-list-hero h1,html[lang="en"] body.page-gue
 @media(max-width:800px){.bl-photo-hero{min-height:480px}.bl-photo-hero>.wrap{width:min(100% - 44px,1330px);padding:85px 0}.bl-about-prose .prose,.bl-media-overview .bl-media-prose-grid{grid-template-columns:1fr}.bl-media-collab-grid{grid-template-columns:1fr}.bl-media-featured{grid-template-columns:1fr}.bl-contact-routes{grid-template-columns:1fr}}
 @media(max-width:520px){.bl-photo-hero{min-height:490px;align-items:end}.bl-photo-hero-bg{background-position:60% top;opacity:.80}.bl-photo-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.94) 38%,rgba(8,8,8,.33) 80%,rgba(8,8,8,.1) 100%)}[dir=rtl] .bl-photo-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.94) 38%,rgba(8,8,8,.33) 80%,rgba(8,8,8,.1) 100%)}.bl-photo-hero>.wrap{padding:145px 0 40px}.bl-photo-hero h1{font-size:clamp(2.6rem,9vw,3.75rem)}[dir=rtl] .bl-photo-hero h1{font-size:clamp(2.1rem,7.3vw,3.1rem)}.bl-media-collab-grid article{padding:22px}.bl-media-featured .episode-info{padding:19px}}
 @media print{.bl-footer-social,.bl-photo-hero-bg,.bl-photo-hero:before{display:none!important}.bl-photo-hero{min-height:auto!important;background:#fff!important;color:#111!important}.bl-photo-hero h1,.bl-photo-hero .lead,.bl-photo-hero .kicker{color:#111!important}.bl-photo-hero>.wrap{padding:25px 0!important}.bl-media-featured{grid-template-columns:repeat(2,1fr)!important}.bl-media-featured .episode-card{break-inside:avoid}.bl-media-overview,.bl-media-audience,.bl-media-collabs,.bl-media-trust,.bl-media-enquiries{padding:20px 0!important}.bl-media-collab-grid{grid-template-columns:repeat(3,1fr)!important}.bl-media-enquiry-actions,.print-button{display:none!important}}
+
+
+/* ROUND 2 — PRE-APPROVAL TECHNICAL CORRECTIONS (24 Nov 2026).
+   Preserves all source photos and all approved guest profiles. */
+/* 01,03: desktop Home full-bleed image; legacy site CSS contains !important inset
+   and width constraints, so the photo is positioned at viewport width while the
+   headline keeps its original reading gutter. No distortion or bitmap editing. */
+@media(min-width:769px){
+ body.page-index .hero.visual-studio-hero{overflow:hidden!important}
+ body.page-index .hero.visual-studio-hero .hero-studio-photo{
+  position:absolute!important;inset:auto!important;top:0!important;bottom:0!important;
+  left:50%!important;right:auto!important;width:100vw!important;height:100%!important;
+  min-height:0!important;max-width:none!important;transform:translateX(-50%)!important;
+  z-index:0;pointer-events:none;overflow:hidden;
+ }
+ body.page-index .hero.visual-studio-hero .hero-studio-photo img{
+  position:absolute!important;top:0!important;bottom:0!important;
+  left:-2%!important;right:auto!important;width:124%!important;height:100%!important;
+  max-width:none!important;object-fit:cover!important;object-position:center center!important;
+  filter:brightness(.91) saturate(.96)!important;
+ }
+ body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+  background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.96) 19%,rgba(8,8,8,.62) 36%,rgba(8,8,8,.12) 51%,transparent 70%),linear-gradient(0deg,#080808,transparent 22%)!important;
+ }
+ [dir=rtl] body.page-index .hero.visual-studio-hero .hero-studio-photo img{left:-20%!important}
+ [dir=rtl] body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+  background:linear-gradient(270deg,#080808 0%,rgba(8,8,8,.97) 18%,rgba(8,8,8,.69) 36%,rgba(8,8,8,.12) 55%,transparent 74%),linear-gradient(0deg,#080808,transparent 22%)!important;
+ }
+ [dir=rtl] body.page-index .hero.visual-studio-hero .hero-copy{
+  margin-left:auto!important;margin-right:0!important;text-align:right!important;direction:rtl;
+ }
+}
+/* 04,05,06: proportion-only resize prevents a blank strip; originals unchanged. */
+.bl-guests .bl-guest-card .bl-guest-image[href$="behnam-bohlouli.html"] img{width:100%;top:0}
+.bl-guests .bl-guest-card .bl-guest-image[href$="saman-tahmasbi.html"] img{width:89%;top:0}
+.bl-guests .bl-guest-card .bl-guest-image[href$="sam-toyserkani.html"] img{width:93%;top:0}
+/* 07: Azar Mohammadi's cutout subject is off-centre within its source canvas. */
+.bl-guests .bl-guest-card .bl-guest-image[href$="azar-mohammadi.html"] img{left:40%}
+/* 08: Persian Guests heading uses site's established Persian typography. */
+html[lang="fa"] body.bl-guests .bl-guest-list-hero h1{
+ font-family:'Vazirmatn','Noto Sans Arabic',Tahoma,Arial,sans-serif;
+ font-size:clamp(2.3rem,4vw,4.4rem);font-weight:700;line-height:1.5;letter-spacing:0;
+}
+/* 10,11: mobile photographic composition; desktop untouched, no stretching. */
+@media(max-width:600px){
+ .bl-photo-hero{min-height:660px;align-items:flex-end}
+ .bl-photo-hero .bl-photo-hero-bg{
+  opacity:1;inset:0;background-repeat:no-repeat;background-size:auto 67%;
+  background-position:center top;
+ }
+ .bl-about-hero .bl-photo-hero-bg{background-position:66% top}
+ .bl-media-hero .bl-photo-hero-bg{background-position:37% top}
+ .bl-photo-hero::before,[dir=rtl] .bl-photo-hero::before{
+  background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.98) 19%,rgba(8,8,8,.85) 32%,rgba(8,8,8,.24) 57%,rgba(8,8,8,.01) 87%);
+ }
+ .bl-photo-hero>.wrap{padding:388px 0 52px;width:min(100% - 46px,1330px)}
+}
+
+/* ROUND 2 FINAL APPROVAL — Contact A editorial split & footer C on desktop */
+.bl-contact-a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:clamp(32px,6vw,100px);align-items:start}
+.bl-contact-a .bl-contact-intro{max-width:none}
+.bl-contact-a .bl-contact-intro h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em;line-height:1.04;font-size:clamp(3.5rem,5.1vw,5.7rem);margin:24px 0 28px;max-width:12ch;color:#f1ede6}
+.bl-contact-a .bl-contact-intro p{color:#c6c0b8;font-size:1rem;line-height:1.9;max-width:62ch;margin:0 0 22px}
+.bl-contact-a .bl-contact-intro .bl-contact-lead{font-size:clamp(1.15rem,1.55vw,1.5rem);line-height:1.6;color:#f1ede6}
+.bl-contact-a .bl-contact-request{font-weight:600}
+.bl-contact-a .bl-contact-directory{min-width:0}
+.bl-contact-a .bl-contact-directory>h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:#b9b2a8;margin:14px 0 24px}
+.bl-contact-a .bl-contact-routes{display:block!important;padding:0;margin:0;list-style:none}
+.bl-contact-a .bl-contact-row{display:grid!important;grid-template-columns:30px minmax(0,1fr) 22px!important;gap:17px;align-items:center;border:0!important;border-top:1px solid #383637!important;border-radius:0!important;background:transparent!important;margin:0!important;padding:19px 0!important;min-height:83px}
+.bl-contact-a .bl-contact-row:last-child{border-bottom:1px solid #383637!important}
+.bl-contact-a .bl-contact-row::after{content:'↗';color:#a6a09a;font-size:1.15rem;text-align:center}
+.bl-contact-a .bl-contact-route-0::after{content:''}
+.bl-contact-a .bl-contact-row>.bl-icon{width:22px;height:22px;color:#d6d1cc}
+.bl-contact-a .bl-contact-row>div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.bl-contact-a .bl-contact-label{font-size:.69rem;font-weight:750;line-height:1.4;color:#a8a39e;text-transform:uppercase;letter-spacing:.12em}
+.bl-contact-a .bl-contact-row a,.bl-contact-a .bl-contact-row .bl-email-placeholder{font-size:1rem;line-height:1.4;color:#f1ede6;text-decoration:none;overflow-wrap:anywhere;font-weight:500}
+.bl-contact-a .bl-contact-row a:hover{text-decoration:underline;color:#fff}
+.bl-contact-a .bl-demo-label{font-size:.75rem;line-height:1.5;color:#aaa29b}
+.bl-contact-a .bl-contact-editorial-note{grid-column:1 / -1;border-top:1px solid #393636;padding-top:30px;margin-top:8px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.72fr);gap:48px;align-items:start}
+.bl-contact-a .bl-contact-editorial-note h3{font-size:1.3rem;margin:0 0 14px;color:#f1ede6}
+.bl-contact-a .bl-contact-editorial-note p{line-height:1.85;color:#beb8b2;margin:0;max-width:70ch}
+.bl-contact-a .bl-contact-editorial-note .bl-contact-footnote{font-size:.85rem;color:#b3a9a5;line-height:1.9}
+html[lang="fa"] .bl-contact-a{direction:rtl}
+html[lang="fa"] .bl-contact-a .bl-contact-intro h2{font-family:Vazirmatn,Tahoma,Arial,sans-serif;font-size:clamp(2.8rem,4vw,4.25rem);line-height:1.45;letter-spacing:0;font-weight:700;max-width:none}
+html[lang="fa"] .bl-contact-a .bl-contact-directory>h3,html[lang="fa"] .bl-contact-a .bl-contact-label{letter-spacing:0;text-transform:none}
+html[lang="fa"] .bl-contact-a .bl-contact-row{direction:rtl}
+html[lang="fa"] .bl-contact-a .bl-contact-row::after{content:'↖'}
+html[lang="fa"] .bl-contact-a .bl-contact-route-0::after{content:''}
+@media(min-width:901px){
+ footer .wrap{align-items:start;gap:22px}
+ footer .wrap>nav{max-width:580px;align-items:center;margin-top:8px}
+ footer .wrap>.bl-footer-social{display:flex;flex:0 0 auto;align-items:center;justify-content:center;gap:8px;padding:0!important;border:0!important;margin:8px 0 0!important}
+ footer .wrap>.bl-footer-social a{width:36px;height:36px;border:1px solid rgba(241,237,230,.24);border-radius:2px;color:#c9b78f;display:grid;place-items:center}
+ footer .wrap>.bl-footer-social .bl-icon{width:18px;height:18px}
+}
+@media(max-width:1040px) and (min-width:901px){footer .wrap{flex-wrap:wrap}footer .wrap>nav{max-width:calc(100% - 100px);order:2}footer .wrap>.bl-footer-social{order:1}}
+@media(max-width:900px){
+ .bl-contact-a{grid-template-columns:1fr;gap:26px}
+ .bl-contact-a .bl-contact-intro h2{font-size:clamp(3rem,7vw,4.8rem)}
+ .bl-contact-a .bl-contact-directory>h3{margin-top:3px}
+ .bl-contact-a .bl-contact-editorial-note{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:520px){.bl-contact-a .bl-contact-intro h2{font-size:clamp(2.6rem,9vw,3.5rem)}html[lang="fa"] .bl-contact-a .bl-contact-intro h2{font-size:clamp(2.25rem,7.8vw,3.15rem)}.bl-contact-a .bl-contact-row{gap:10px;grid-template-columns:24px minmax(0,1fr) 18px!important}}
+
+/* Keep Latin contact handles and phone readable on Persian screens. */
+html[lang="fa"] .bl-contact-a .bl-contact-row a[dir="ltr"], html[lang="fa"] .bl-contact-a .bl-contact-row [data-email-display]{unicode-bidi:isolate;direction:ltr;text-align:left;align-self:flex-end}
