@@ -31,7 +31,7 @@
  if(!wrap||!nav||!socials)return;
  const desktop=window.matchMedia('(min-width: 901px)');
  const sync=()=>{
-   if(desktop.matches){if(socials.parentElement!==wrap)wrap.insertBefore(socials,nav);}
+   if(desktop.matches){if(socials.parentElement!==wrap)wrap.appendChild(socials);}
    else if(socials.parentElement!==footer)footer.appendChild(socials);
  };
  sync();

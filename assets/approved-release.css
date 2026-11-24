@@ -163,3 +163,108 @@ html[lang="fa"] .bl-contact-a .bl-contact-route-0::after{content:''}
 
 /* Keep Latin contact handles and phone readable on Persian screens. */
 html[lang="fa"] .bl-contact-a .bl-contact-row a[dir="ltr"], html[lang="fa"] .bl-contact-a .bl-contact-row [data-email-display]{unicode-bidi:isolate;direction:ltr;text-align:left;align-self:flex-end}
+\n\n/* ROUND 3 — corrections checked against the approved owner feedback, 24 Nov 2026. */
+/* HOME: use the approved ORIGINAL-RESOLUTION scene, not its former 702 px compressed asset. */
+body.page-index .hero.visual-studio-hero{
+ position:relative!important;overflow:hidden!important;
+ background:#080808!important;
+}
+body.page-index .hero.visual-studio-hero .hero-grid{position:relative!important;isolation:isolate}
+body.page-index .hero.visual-studio-hero .hero-studio-photo{
+ position:absolute!important;top:0!important;bottom:0!important;left:50%!important;right:auto!important;
+ width:100vw!important;height:100%!important;
+ max-width:none!important;min-height:0!important;margin:0!important;
+ transform:translateX(-50%)!important;z-index:-1!important;overflow:hidden!important;pointer-events:none!important;
+}
+body.page-index .hero.visual-studio-hero .hero-studio-photo img{
+ display:block!important;position:absolute!important;inset:0!important;
+ width:100%!important;height:100%!important;max-width:none!important;
+ object-fit:cover!important;object-position:center top!important;
+ transform:none!important;filter:none!important;image-rendering:auto!important;
+}
+body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+ content:''!important;position:absolute!important;inset:0!important;z-index:2!important;
+ background:linear-gradient(90deg,rgba(8,8,8,.78) 0%,rgba(8,8,8,.68) 24%,rgba(8,8,8,.30) 40%,transparent 56%)!important;
+}
+body.page-index .hero.visual-studio-hero .hero-copy{z-index:3!important}
+/* Persian: keep embedded logo lettering UNMIRRORED and legible; separate the reading area with a dark directional overlay. */
+[dir="rtl"] body.page-index .hero.visual-studio-hero .hero-studio-photo img{left:0!important;transform:none!important;object-position:center top!important}
+[dir="rtl"] body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+ background:linear-gradient(270deg,rgba(8,8,8,.81) 0%,rgba(8,8,8,.72) 24%,rgba(8,8,8,.34) 43%,transparent 58%)!important;
+}
+/* Give the entire approved studio composition enough vertical space to retain furniture below the logo. */
+@media(min-width:901px){
+ body.page-index .hero.visual-studio-hero,
+ body.page-index .hero.visual-studio-hero .hero-grid{min-height:clamp(680px,51vw,845px)!important}
+ body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+  background:linear-gradient(90deg,rgba(8,8,8,.98) 0%,rgba(8,8,8,.96) 33%,rgba(8,8,8,.60) 46%,transparent 60%)!important;
+ }
+ [dir="rtl"] body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+  background:linear-gradient(270deg,rgba(8,8,8,.98) 0%,rgba(8,8,8,.96) 33%,rgba(8,8,8,.62) 47%,transparent 62%)!important;
+ }
+}
+/* Desktop approved option C: brand left, navigation followed immediately by small square social icons. */
+@media(min-width:901px){
+ footer>.wrap{justify-content:space-between!important;align-items:flex-start!important;gap:20px!important}
+ footer>.wrap>nav{order:1!important;margin:8px 0 0 auto!important;align-self:flex-start!important;flex:0 1 auto!important;max-width:none!important;align-items:center!important;gap:15px!important}
+ footer>.wrap>nav a[href*="youtube.com"]{display:none!important} /* icon replaces duplicate text link on desktop only */
+ footer>.wrap>.bl-footer-social{order:2!important;align-self:flex-start!important;flex:0 0 auto!important;margin:7px 0 0 0!important;gap:9px!important;padding:0!important;border:0!important;display:flex!important}
+ footer>.wrap>.bl-footer-social a{width:36px!important;height:36px!important;border:1px solid rgba(241,237,230,.30)!important;border-radius:2px!important;background:transparent!important;color:#d7d1cb!important}
+ footer>.wrap>.bl-footer-social .bl-icon{width:18px!important;height:18px!important}
+ [dir="rtl"] footer>.wrap>nav{margin:8px auto 0 0!important}
+}
+/* On mobile preserve the user-approved existing BOTTOM social row. */
+@media(max-width:900px){footer>.wrap>.bl-footer-social{display:none!important}}
+/* Restore the photographic mobile heroes: an edge-to-edge picture across the WHOLE screen width,
+   with copy beneath it, keeping the approved desktop presentation fully intact. */
+@media(max-width:800px){
+ .bl-photo-hero{--bl-mobile-photo-height:clamp(280px,79vw,410px);position:relative!important;display:block!important;
+  min-height:0!important;padding:0!important;overflow:hidden!important;background:#080808!important;isolation:isolate!important}
+ .bl-photo-hero .bl-photo-hero-bg{
+  position:absolute!important;inset:0 0 auto 0!important;width:100%!important;
+  height:var(--bl-mobile-photo-height)!important;opacity:1!important;
+  background-size:cover!important;background-repeat:no-repeat!important;
+  transform:none!important;z-index:-1!important;
+ }
+ .bl-about-hero .bl-photo-hero-bg{background-position:85% center!important}
+ .bl-media-hero .bl-photo-hero-bg{background-position:81% center!important}
+ .bl-photo-hero::before,[dir="rtl"] .bl-photo-hero::before{
+  position:absolute!important;top:calc(var(--bl-mobile-photo-height) - 62px)!important;
+  bottom:auto!important;left:0!important;right:0!important;height:63px!important;
+  background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.35) 80%,transparent 100%)!important;
+  z-index:0!important;
+ }
+ .bl-photo-hero>.wrap{width:min(100% - 42px,1330px)!important;min-height:0!important;
+  padding:calc(var(--bl-mobile-photo-height) + 22px) 0 62px!important;position:relative!important;z-index:1!important}
+ .bl-photo-hero h1{margin-top:20px!important}
+}
+
+/* The Home mobile presentation is two distinct rows, not text on top of the photograph. */
+@media(max-width:768px){
+ body.page-index .hero.visual-studio-hero .hero-grid{
+  display:flex!important;flex-direction:column!important;min-height:0!important;
+ }
+ body.page-index .hero.visual-studio-hero .hero-studio-photo{
+  position:relative!important;top:auto!important;bottom:auto!important;
+  left:auto!important;right:auto!important;width:100vw!important;
+  height:clamp(250px,79vw,460px)!important;min-height:0!important;
+  align-self:center!important;margin:0!important;transform:none!important;
+  order:0!important;flex:0 0 auto!important;z-index:0!important;
+ }
+ body.page-index .hero.visual-studio-hero .hero-studio-photo img{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:60% center!important;
+  filter:none!important;
+ }
+ [dir="rtl"] body.page-index .hero.visual-studio-hero .hero-studio-photo img{object-position:60% center!important}
+ body.page-index .hero.visual-studio-hero .hero-studio-photo::before{
+  background:linear-gradient(0deg,#080808 0%,transparent 20%)!important;
+ }
+ body.page-index .hero.visual-studio-hero .hero-copy,
+ [dir="rtl"] body.page-index .hero.visual-studio-hero .hero-copy{
+  order:1!important;grid-column:auto!important;grid-row:auto!important;
+  position:relative!important;z-index:2!important;max-width:100%!important;
+  padding:22px 0 53px!important;margin:0!important;
+ }
+}
+
