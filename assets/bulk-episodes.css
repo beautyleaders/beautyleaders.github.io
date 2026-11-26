@@ -76,3 +76,7 @@ html[lang=fa] body.bl-bulk .bl-archive-head p.bl-archive-sub{font-size:.97rem;li
 .bl-bulk .bl-episode-pages .current{background:#c9b78f;color:#16120e;border-color:#c9b78f}
 .bl-bulk .bl-archive-guest a{color:inherit;text-decoration:underline;text-decoration-color:#786b57}
 .bl-bulk .bl-ep-guest a{color:inherit;text-decoration:underline;text-decoration-color:#786b57}
+
+/* Compact interviewer attribution; scoped to episode pages only. */
+.bl-bulk .bl-ep-interviewer > .kicker{margin:0 0 4px;line-height:1.5}
+.bl-bulk .bl-ep-interviewer > .bl-ep-role{margin:0;line-height:1.65}
