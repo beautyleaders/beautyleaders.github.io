@@ -85,3 +85,6 @@ html[lang=fa] body.bl-bulk .bl-archive-head p.bl-archive-sub{font-size:.97rem;li
 
 /* Archive result count: inherit the existing toolbar text color for accessible contrast. */
 .bl-bulk .bl-archive-tools-right #search-count{color:inherit}
+
+/* Align the archive count and reset control on the same row. */
+.bl-bulk .bl-archive-tools-right #search-count{margin:0}
