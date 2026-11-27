@@ -82,3 +82,6 @@ html[lang=fa] body.bl-bulk .bl-archive-head p.bl-archive-sub{font-size:.97rem;li
 .bl-bulk .bl-ep-interviewer > .kicker{margin:0!important;padding:0!important;line-height:1.4!important}
 .bl-bulk .bl-ep-interviewer > .bl-ep-role{margin:0!important;padding:0!important;line-height:1.6!important}
 @media(max-width:1024px){.bl-bulk .bl-ep-interviewer{gap:3px!important}.bl-bulk .bl-ep-interviewer > .kicker,.bl-bulk .bl-ep-interviewer > .bl-ep-role{margin:0!important;padding:0!important}}
+
+/* Archive result count: inherit the existing toolbar text color for accessible contrast. */
+.bl-bulk .bl-archive-tools-right #search-count{color:inherit}
